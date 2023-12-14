@@ -7,6 +7,10 @@
 # Inherit from mt6789-common
 $(call inherit-product, device/transsion/mt6789-common/common.mk)
 
+# Virtual A/B
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 # Fastbootd
  PRODUCT_PACKAGES += \
      android.hardware.fastboot@1.0-impl-mock \
